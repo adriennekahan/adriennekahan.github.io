@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Comptaible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="User Experience (UX) Research and Design Portfolio">
+	    <meta name="author" content="Adrienne Kahan">
+		<link rel="icon" type="image/png" href="assets/img/AdrienneKahanLogo.png">
+  		<link href="assets/css/bootstrap.css" rel="stylesheet">
+		<link href="assets/css/style.css" rel="stylesheet">
+		<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+		<title>Adrienne Kahan</title>
+
+
+ 		</script>
+	</head>
+
+	<body>
+
+		<!-- ==============================> Header <============================== */ -->
+
+
+			<div id="header">
+				<div class="title col-md-6 col-xs-12">
+				<a href="http://adriennekahan.com/" style="text-decoration:none">ADRIENNE KAHAN</a></div>
+				<div class="titledetail col-md-6 col-xs-12">UX DESIGN + RESEARCH</div>
+			</div>
+
+		<!-- ==============================> Main <============================== */ -->
+
+			<div id="gallery">
+				<div style="width: 600px; line-height: 140px">
+					<div class="topleft thumb">
+						<a href="ixda.html"><img src="assets/img/IxDA_Home_Iphone6_color.png"></a>
+					</div>
+					<div class="topright thumb">
+						<a href="wsc.html"><img src="assets/img/WSC_Mockup.jpg"></a>
+					</div>
+					<div class="bottomleft thumb">
+						<a href="smarsheet.html"><img src="assets/img/Smartsheet_Mockup.jpg"></a>
+					</div>
+					<div class="bottomright thumb"></div>
+				</div>
+			</div>
+
+		<!-- ==============================> Nav <============================== */ -->
+
+			<div id="menu">
+				<div class="accordion">
+					<ul class="accordion-section-title" style="list-style:none">
+						<li><a href="#accordion-1">WORK</a>
+							<div id="accordion-1" class="accordion-section-content">
+								<ul class="go" style="list-style:none">
+									<li><a href="smartsheet.html">Smartsheet</a></li>
+									<li class="active"><a href="ixda.html">IxDA</a></li>
+									<li><a href="wsc.html">William-Sonoma Cooks</a></li>
+									<li><a href="playbetter.html">Playbetter</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a class="accordion-section-title" href="#accordion-2">ABOUT</a></li>
+					</ul>
+				</div>
+				<br> <br> <br> <br> <br> <br>
+				<div class="connect">
+					<a href="mailto:adrienne.kahan@gmail.com">SAY HELLO     <i class="fa fa-envelope-o"></i>
+					</a>
+				</div>
+			</div>
+
+		<!-- ==============================> Footer <============================== */ -->
+
+		<div class="footer">
+			<p>&copy Adrienne Kahan 2016</p>
+		</div>	
+
+
+
+
+		<script src="jquery.js"></script>
+		<script>
+			$(document).ready(function() {
+			    function open_accordion_section() {
+			        $('.accordion .accordion-section-title').removeClass('active');
+			        $('.accordion .accordion-section-content').slideDown(300).removeClass('open');
+			    }
+
+			    $('.accordion-section-title').click(function(e) {
+			        // Grab current anchor value
+			        var currentAttrValue = $(this).attr('href');
+			 
+			        if($(e.target).is('.active')) {
+			            open_accordion_section();
+			        }else {
+			            open_accordion_section();
+			 
+			            // Add active class to section title
+			            $(this).addClass('active');
+			            // Open up the hidden content panel
+			            $('.accordion ' + currentAttrValue).slideUp(300).addClass('open'); 
+			        }
+			 
+			        e.preventDefault();
+			    });
+			});
+		</script>
+
+	</body>	
+</html>

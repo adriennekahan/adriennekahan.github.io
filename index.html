@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Adrienne Kahan</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Comptaible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <meta name="description" content="User Experience (UX) Research and Design Portfolio">
+	    <meta name="author" content="Adrienne Kahan">
+		<link rel="icon" type="image/png" href="assets/img/AdrienneKahanLogo.png">
+  		<link href="assets/css/bootstrap.css" rel="stylesheet">
+		<link href="assets/css/style.css" rel="stylesheet">
+		<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+
+
+		</head>
+
+	<body>
+
+		<!-- ==============================> Header <============================== */ -->
+
+
+			<div id="header">
+				<div class="title col-md-6 col-xs-12">
+				<a href="http://adriennekahan.com/" style="text-decoration:none">ADRIENNE KAHAN</a></div>
+				<div class="titledetail col-md-6 col-xs-12">UX DESIGN + RESEARCH</div>
+			</div>
+
+		<!-- ==============================> Main <============================== */ -->
+
+			<div class="content">
+				<!-- <div class="text"> -->
+						<div class="thumb">
+							<a href="smartsheet.html"><img src="assets/img/Smartsheet_Mockup_V2.png"><p class="txt"></p></a>
+						</div>
+						<div class="thumb">
+							<a href="ixda.html"><img src="assets/img/IxDA_Home_Iphone6_color_v2.png"></a>
+						</div>
+						<div class="thumb">
+							<a href="wsc.html"><img src="assets/img/WSC_Mockup.png"></a>
+						</div>
+						<div class="thumb">
+							
+						</div>
+					
+				<!-- </div> -->
+			</div>
+
+		<!-- ==============================> Nav <============================== */ -->
+
+			<div id="menu">
+				<div class="accordion">
+					<ul class="accordion-section-title">
+						<li class="active"><a href="index.html">WORK</a></li>
+							<div id="accordion-1" class="accordion-section-content">
+								<ul class="go">
+									<li><a href="smartsheet.html">Smartsheet</a></li>
+									<li><a href="ixda.html">IxDA</a></li>
+									<li><a href="wsc.html">Williams-Sonoma</a></li>
+								</ul>
+							</div>
+						
+						<li><a href="about.html">ABOUT</a></li>
+						<br><br><br>
+						<li><a href="mailto:adrienne.kahan@gmail.com">SAY HELLO     <i class="fa fa-envelope-o"></i></a><a target="_blank" href="https://www.linkedin.com/in/adriennekahandesign">  <i class="fa fa-linkedin"></i></a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+		<!-- ==============================> Footer <============================== */ -->
+
+		
+
+
+
+
+		<script src="jquery.js"></script>
+		<script>
+			$(document).ready(function() {
+			    function open_accordion_section() {
+			        $('.accordion .accordion-section-title').removeClass('active');
+			        $('.accordion .accordion-section-content').slideDown(300).removeClass('open');
+			    }
+
+			    $('.accordion-section-title').click(function(e) {
+			        // Grab current anchor value
+			        var currentAttrValue = $(this).attr('href');
+			 
+			        if($(e.target).is('.active')) {
+			            open_accordion_section();
+			        }else {
+			            open_accordion_section();
+			 
+			            // Add active class to section title
+			            $(this).addClass('active');
+			            // Open up the hidden content panel
+			            $('.accordion ' + currentAttrValue).slideUp(300).addClass('open'); 
+			        }
+			 
+			        e.preventDefault();
+			    });
+			});
+		</script>
+
+	</body>	
+</html>
